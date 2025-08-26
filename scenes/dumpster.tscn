@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://0w1b7ia7web4"]
+
+[ext_resource type="Script" uid="uid://cfo70dklv3ihx" path="res://scenes/trash_generator.gd" id="1_105n0"]
+[ext_resource type="Texture2D" uid="uid://buhb8lwfvmiqo" path="res://sprites/dumpster.png" id="2_105n0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx2na"]
+size = Vector2(128, 62)
+
+[node name="Dumpster" type="Node2D"]
+
+[node name="TrashGenerator" type="Node" parent="." node_paths=PackedStringArray("trash_area", "trash_collision_shape")]
+script = ExtResource("1_105n0")
+trash_amount = 50
+trash_area = NodePath("../TrashArea")
+trash_collision_shape = NodePath("../TrashArea/CollisionShape2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(129, 64)
+texture = ExtResource("2_105n0")
+
+[node name="TrashArea" type="Area2D" parent="."]
+position = Vector2(130, 69)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashArea"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_bx2na")

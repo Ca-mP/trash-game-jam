@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf2jn4pjnnvy6"]
+
+[ext_resource type="Script" uid="uid://dcqpo38qnw7lj" path="res://scenes/trash/trash.gd" id="1_2hmw1"]
+[ext_resource type="Texture2D" uid="uid://ba2gloik2852r" path="res://sprites/bag.png" id="2_eoi41"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhlpk"]
+radius = 25.1794
+
+[node name="TrashBag" type="Area2D"]
+script = ExtResource("1_2hmw1")
+value = 4.0
+grab_rotation = 180
+metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_eoi41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uhlpk")

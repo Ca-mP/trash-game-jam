@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4glff0qiw5rx"]
+
+[ext_resource type="Script" uid="uid://dcqpo38qnw7lj" path="res://scenes/trash/trash.gd" id="1_p56qe"]
+[ext_resource type="Texture2D" uid="uid://bogplc410p1iu" path="res://sprites/Bottle.png" id="2_ort2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66efu"]
+size = Vector2(20, 63)
+
+[node name="TrashBottle" type="Area2D"]
+script = ExtResource("1_p56qe")
+value = 0.5
+grab_rotation = 90
+metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ort2k")
+offset = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -10)
+shape = SubResource("RectangleShape2D_66efu")

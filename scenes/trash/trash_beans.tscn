@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://fd4t8226jpbv"]
+
+[ext_resource type="Script" uid="uid://dcqpo38qnw7lj" path="res://scenes/trash/trash.gd" id="1_44ikq"]
+[ext_resource type="Texture2D" uid="uid://bxhad1hdf5nmg" path="res://sprites/beans.png" id="2_hecmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0yqw"]
+size = Vector2(24, 31)
+
+[node name="TrashBeans" type="Area2D"]
+script = ExtResource("1_44ikq")
+value = 3.0
+grab_rotation = 45
+metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hecmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_s0yqw")
