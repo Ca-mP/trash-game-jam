@@ -7,8 +7,9 @@
 radius = 25.1794
 
 [node name="TrashBag" type="Area2D"]
+collision_mask = 24
 script = ExtResource("1_2hmw1")
-value = 4.0
+value = 0.3
 grab_rotation = 180
 metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
 

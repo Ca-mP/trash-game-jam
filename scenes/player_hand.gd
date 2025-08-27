@@ -29,9 +29,11 @@ func _input(event: InputEvent) -> void:
 				if trash_piece.index > highest_index:
 					grabbed_trash = trash_piece
 					trash_piece.grab()
+					trash_piece.grabbed = true
 					highest_index = trash_piece.index
 	
 	if Input.is_action_just_released("click"):
 		if not grabbed_trash == null:
+			grabbed_trash.grabbed = false
 			grabbed_trash.drop()
 			grabbed_trash = null

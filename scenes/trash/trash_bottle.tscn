@@ -7,8 +7,9 @@
 size = Vector2(20, 63)
 
 [node name="TrashBottle" type="Area2D"]
+collision_mask = 24
 script = ExtResource("1_p56qe")
-value = 0.5
+value = 0.1
 grab_rotation = 90
 metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
 

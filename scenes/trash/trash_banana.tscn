@@ -1,20 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtt8yyy06oh2x"]
+[gd_scene load_steps=3 format=3 uid="uid://dtt8yyy06oh2x"]
 
 [ext_resource type="Script" uid="uid://dcqpo38qnw7lj" path="res://scenes/trash/trash.gd" id="1_fxpo0"]
 [ext_resource type="Texture2D" uid="uid://bxyr6j6qxfdn5" path="res://sprites/banana.png" id="2_u5ug7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_u5ug7"]
-radius = 18.0278
-
 [node name="TrashBanana" type="Area2D"]
+collision_mask = 24
 script = ExtResource("1_fxpo0")
-value = 1.0
+value = 0.2
 metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_u5ug7")
 offset = Vector2(7, -13)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, -3)
-shape = SubResource("CircleShape2D_u5ug7")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(3, -4, 11, 0, 19, -4, 28, 13, -5, 13, -12, -6, 3, -40, 14, -30)

@@ -1,17 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgf0n8usqmsjv"]
 
-[ext_resource type="Texture2D" uid="uid://dlm6nmh3xle4a" path="res://icon.svg" id="1_ix74d"]
+[ext_resource type="Texture2D" uid="uid://burpa7u3npbei" path="res://sprites/thenewtrashbag.png" id="1_ix74d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfkpr"]
-size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfkpr"]
+radius = 28.0
 
-[node name="CollectionBag" type="Area2D"]
+[node name="CollectionBag" type="Area2D" groups=["collection_bag"]]
 collision_layer = 8
 collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_ix74d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_cfkpr")
+shape = SubResource("CircleShape2D_cfkpr")

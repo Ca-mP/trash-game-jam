@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://clgufbpe06f8f" path="res://sprites/placeholder-hand-sheet.png" id="1_4moqc"]
 [ext_resource type="Script" uid="uid://1g04v5fxhuf4" path="res://scenes/player_hand.gd" id="1_7gyfc"]
 
-[sub_resource type="Animation" id="Animation_7gyfc"]
-resource_name = "open"
-length = 0.1
+[sub_resource type="Animation" id="Animation_e6atq"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -35,8 +34,9 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_e6atq"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_7gyfc"]
+resource_name = "open"
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -77,6 +77,7 @@ libraries = {
 }
 
 [node name="GrabArea" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
 shape = SubResource("CircleShape2D_7gyfc")

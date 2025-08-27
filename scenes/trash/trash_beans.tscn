@@ -7,8 +7,9 @@
 size = Vector2(24, 31)
 
 [node name="TrashBeans" type="Area2D"]
+collision_mask = 24
 script = ExtResource("1_44ikq")
-value = 3.0
+value = 0.4
 grab_rotation = 45
 metadata/_custom_type_script = "uid://dcqpo38qnw7lj"
 
